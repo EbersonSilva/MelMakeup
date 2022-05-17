@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?pjbpzw');
+  src:  url('fonts/icomoon.eot?pjbpzw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?pjbpzw') format('truetype'),
+    url('fonts/icomoon.woff?pjbpzw') format('woff'),
+    url('fonts/icomoon.svg?pjbpzw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-makeup_cosmetic:before {
+  content: "\e903";
+}
+.icon-face_powder:before {
+  content: "\e900";
+}
+.icon-salon_mirror:before {
+  content: "\e901";
+}
+.icon-lipstick:before {
+  content: "\e902";
+}
+.icon-eye_pencil:before {
+  content: "\e904";
+}
+.icon-pouch_makeup:before {
+  content: "\e905";
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-facebook:before {
+  content: "\e907";
+}
+.icon-instagram:before {
+  content: "\e908";
+}
+.icon-mail:before {
+  content: "\e909";
+}
+.icon-map-pin:before {
+  content: "\e90a";
+}
+.icon-whatsapp:before {
+  content: "\e90b";
+}
+.icon-youtube:before {
+  content: "\e90c";
+}
+.icon-menu:before {
+  content: "\e90f";
+}
+.icon-arrow-up:before {
+  content: "\e90e";
+}
+.icon-phone:before {
+  content: "\e90d";
+}
