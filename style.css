@@ -1,67 +1,66 @@
 /****************** Reset da pagina ********************/
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;   /* nos permite incluir o preenchimento e a borda na largura e altura total de um elemento. */
+  box-sizing: border-box; /* nos permite incluir o preenchimento e a borda na largura e altura total de um elemento. */
 }
 
 /********* Configuração dos links de menu  ************/
 
 /*Retira os marcadores bolinha dos menus.*/
-ul{
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none; /*Retira a formatação dos textos*/
 }
 
-img{
+img {
   width: 100%;
   height: auto;
 }
 
 /**************** Variaveis ***************/
-:root{
-  
+:root {
   --header-height: 4.5rem;
 
-   /* colors */
-   --hue: 342;
+  /* colors */
+  --hue: 342;
 
-   /* HSL color mode */
-   --base-color: hsl(var(--hue) 49% 34%);
-   --base-color-second: hsl(var(--hue) 65% 88%);
-   --base-color-alt: hsl(var(--hue) 57% 53%);
-   --title-color: hsl(var(--hue) 41% 10%);
-   --text-color: hsl(0 0% 46%);
-   --text-color-light: hsl(0 0% 98%);
-   --body-color: hsl(80 7% 92%);
-   --body-color-second: white;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 49% 34%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(80 7% 92%);
+  --body-color-second: white;
 
-   /*********** Fonts **********/
+  /*********** Fonts **********/
 
-   --title-font-size: 1.875rem;
-   --subtitle-font-size: 1rem; 
-   --title-font: 'Poppins', sans-serif;
-   --body-font: 'DM sem', sans-serif;
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM sem', sans-serif;
 }
 
 /******** Base ***************/
 
 /*Muda suavemente ao clicar nos menus*/
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   font: 400 1rem var(--body-font); /*Fontes */
   color: var(--text-color); /*cores*/
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
-.title{
+.title {
   font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
@@ -77,27 +76,27 @@ body{
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem; /*borda arredondada**/
-  font:500 1rem var(--body-font);
+  font: 500 1rem var(--body-font);
   transition: background 0.5s; /*Transição de cores ao passar o mouse */
-
 }
 
-.button:hover{
-background: var(--base-color-alt);
+.button:hover {
+  background: var(--base-color-alt);
 }
 
 /* Configuração da linha de separação de cada seção 1*/
-.divider-1{
+.divider-1 {
   height: 1px;
-  background: linear-gradient(270deg,
-  hsla(var(--hue), 36%, 57%, 1) 0%,
-  hsla(var(--hue), 65%, 88%, 0.34) 100%
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
   );
 }
 
 /* Configuração da linha de separação de cada seção 2*/
 
-.divider-2{
+.divider-2 {
   height: 1px;
   background: linear-gradient(
     270deg,
@@ -106,34 +105,33 @@ background: var(--base-color-alt);
   );
 }
 
-
 /****************** Layout ****************/
-#header{
- border-bottom: 1px solid #E4E4E4; /*borda abaixo da barra de navegação*/
- margin-bottom: 2rem;
- display: flex;
+#header {
+  border-bottom: 1px solid #e4e4e4; /*borda abaixo da barra de navegação*/
+  margin-bottom: 2rem;
+  display: flex;
 
- width: 100%;
- position: fixed;
- top: 0;
- left: 0;
- z-index: 100;
- background-color: var(--body-color-second);
- width: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color-second);
+  width: 100%;
 }
 
 /* Configuração do header ao dar scroll na pagina  */
-#header.scroll{
+#header.scroll {
   /* background: var(--base-color); */
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1); /*Sombra na borda do header ao dar scroll na pagina*/
 }
 
-#header.scroll .logo span{
+#header.scroll .logo span {
   /* color: white; */
   transition: 0.5s;
 }
 
-#header.scroll .icon-menu{
+#header.scroll .icon-menu {
   /* color: white; */
   transition: 0.5s;
 }
@@ -144,22 +142,21 @@ background: var(--base-color-alt);
 } */
 
 /**************** Logo ***********/
-.logo{
+.logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
-
 }
 
-.logo span{
+.logo span {
   color: var(--base-color);
 }
 
-.logo-alt span{
+.logo-alt span {
   color: var(--body-color);
 }
 
 /**************** Navigation ***********/
-nav{
+nav {
   height: var(--header-height);
   display: flex; /*Itens um do lado do outro*/
   align-items: center;
@@ -167,9 +164,7 @@ nav{
   width: 100%;
 }
 
-
-
-nav ul li{
+nav ul li {
   text-align: center;
 }
 
@@ -183,14 +178,13 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   color: var(--base-color);
-
 }
 
 /*Configuração para criar linha abaixo dos menus*/
 nav ul li a::after {
-  content: " ";
+  content: ' ';
   width: 0%; /*Esconde o tamanho da linha que aparece abaixo dos menus*/
-  height: 2px;  /* Espessura da linha abaixo dos menus*/
+  height: 2px; /* Espessura da linha abaixo dos menus*/
   background: var(--base-color); /*Cor da linha*/
 
   position: absolute; /*Posicionamento absoluto em relação <a>*/
@@ -201,51 +195,47 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after,
-nav ul li a.active::after
-{
+nav ul li a.active::after {
   width: 100%; /*Termino da linha */
- 
 }
 
-
-nav .menu{
-  opacity: 0;  /* Deixa os menus transparente*/
-  visibility: hidden;  /*Esconde os menus*/
+nav .menu {
+  opacity: 0; /* Deixa os menus transparente*/
+  visibility: hidden; /*Esconde os menus*/
   top: -20rem; /*Quantidade de rem que ele se esonde acima*/
   transition: 0.4s; /*Tempo do menu descer */
 }
 
-nav .menu ul{
+nav .menu ul {
   display: none;
 }
 
-  /******************* Mostrar menu *****************/
+/******************* Mostrar menu *****************/
 
 /* Não tem espaço entre NAV e .SHOW porque NAV ira receber uma classe .show  */
-  nav.show .menu{
-    opacity: 1;  
-    visibility: visible;  
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
 
-    background: var(--body-color);
-    height: 100vh;  /*100% viewport height*/
-    width: 100vw; /*100% viewport widht*/
+  background: var(--body-color);
+  height: 100vh; /*100% viewport height*/
+  width: 100vw; /*100% viewport widht*/
 
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    display: grid;
-    place-content: center;
-  }
+  display: grid;
+  place-content: center;
+}
 
+nav.show .menu ul {
+  display: grid; /*Como e mostrado o menu ao aparecer*/
+}
 
-  nav.show .menu ul{
-    display: grid; /*Como e mostrado o menu ao aparecer*/
-  }
-
-  nav.show ul.grid{
-    gap: 4rem;   /*Define um intervalo entre linhas e colunas*/
-  }
+nav.show ul.grid {
+  gap: 4rem; /*Define um intervalo entre linhas e colunas*/
+}
 
 /* Toggle menu */
 .toggle {
@@ -255,7 +245,7 @@ nav .menu ul{
 }
 
 /* Configuração do botão close X*/
-nav .icon-close{
+nav .icon-close {
   visibility: hidden;
   opacity: 0;
 
@@ -266,55 +256,53 @@ nav .icon-close{
   transition: 0.4s; /*Transição do efeito do botão x subir*/
 }
 
-nav.show .icon-close{
+nav.show .icon-close {
   visibility: visible; /*Deixa o botão visivel*/
   opacity: 1;
   top: 1.5rem; /*Posição de onde o botão fica ao aparecer*/
 }
 
-.container{
+.container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  }
-
-  .grid{
-    display: grid;
-    gap: 2rem;  /* Espaçamento de 32px*/
-  }
-
-.section{
-  padding: calc(5rem + var(--header-height)) 0;
-  
 }
 
-.section .title{
+.grid {
+  display: grid;
+  gap: 2rem; /* Espaçamento de 32px*/
+}
+
+.section {
+  padding: calc(5rem + var(--header-height)) 0;
+}
+
+.section .title {
   margin-bottom: 1rem;
 }
 
-.section .subtitle{
+.section .subtitle {
   font-size: var(--subtitle-font-size);
 }
 
-.section header{
+.section header {
   margin-bottom: 4rem; /*Margem na parte inferir de 64px*/
 }
 
-.section header strong{
+.section header strong {
   color: var(--base-color);
 }
 
 /*********** Home **************/
-#home{
+#home {
   overflow: hidden;
 }
 
-#home .container{
+#home .container {
   margin: 0;
-  
 }
 
 /*Deixa minha imagem com posição relativa*/
-#home .image{
+#home .image {
   position: relative;
 }
 
@@ -330,32 +318,31 @@ nav.show .icon-close{
   z-index: 0; /*Posiciona o objeto atras da imagem */
 }
 
-#home .image img{
+#home .image img {
   position: relative;
   right: 2.93rem;
 }
 
 /* Borda arredondada*/
-#home .image img, #home .image::before {
+#home .image img,
+#home .image::before {
   border-radius: 0.25rem;
 }
 
-#home .text{
+#home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   text-align: center;
 }
 
 /* Margem inferior de 1rem ou 16px.*/
-#home .text h2{
+#home .text h2 {
   margin-bottom: 1rem;
-  
 }
 
 /* Margem inferior de 2rem ou 32px.*/
-#home .text p{
+#home .text p {
   margin-bottom: 2rem;
-
 }
 
 /************ About **********************/
@@ -364,13 +351,12 @@ nav.show .icon-close{
   background: var(--body-color-second);
 }
 
-#about .container{
+#about .container {
   margin: 0;
-  
 }
 
 /*Deixa minha imagem com posição relativa*/
-#about .image{
+#about .image {
   position: relative;
 }
 
@@ -386,93 +372,92 @@ nav.show .icon-close{
   z-index: 0; /*Posiciona o objeto atras da imagem */
 }
 
-#about .image img{
+#about .image img {
   position: relative;
 }
 
 /* Borda arredondada*/
-#about .image img, 
+#about .image img,
 #about .image::before {
   border-radius: 0.25rem;
 }
 
-#about .text{
+#about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
 /*********** Home **************/
 
-.cards.grid{
+.cards.grid {
   gap: 1.5rem; /*Espaçamento entre cards*/
 }
 
-.card{
+.card {
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  border-bottom: .25rem solid var(--base-color);
-  border-radius: .25rem .25rem 0 0;
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
   background: var(--body-color-second);
 }
 
-.card i{
-   display: block;
-   margin-bottom: 1.5rem;
-   font-size: 5rem;
-   color: var(--base-color);
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
 }
 
-.card .title{
+.card .title {
   font-size: 1.5rem;
-  margin-bottom: .75rem,;
+  margin-bottom: 0.75rem;
 }
 
 /*********** Depoimentos **************/
-#testimonials{
+#testimonials {
   background: var(--body-color-second); /*Cor de fundo*/
 }
 
-#testimonials .container{
+#testimonials .container {
   margin-left: 0;
   margin-right: 0;
 }
 
-#testimonials header{
+#testimonials header {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 0;
 }
 
-
-#testimonials blockquote{  /**/
+#testimonials blockquote {
+  /**/
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
-  background: var(--body-color)
+  background: var(--body-color);
 }
 
-#testimonials blockquote p{
+#testimonials blockquote p {
   position: relative;
   text-indent: 1.875rem; /*Identação do texto*/
   margin-bottom: 1.5rem;
   color: var(--title-color);
 }
 
-
-#testimonials blockquote p span{
+#testimonials blockquote p span {
   font: 700 2.5rem serif;
-  
+
   position: absolute;
   top: -0.5rem; /*Posiçã do span de aspas veticalmente*/
   left: -1.875rem; /*Posição do span aspas horizontalmente*/
   color: var(--base-color);
 }
 
-#testimonials cite{
-display: flex;
-align-items: center;
-font-style: normal;
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
 }
 
 #testimonials cite img {
@@ -481,29 +466,26 @@ font-style: normal;
   object-fit: cover; /*Cobre com a imagem todo o espaco da tag IMG*/
   clip-path: circle();
   margin-right: 0.5rem;
-
-
 }
 
 /* Swiper */
-.swiper-slide{
+.swiper-slide {
   height: auto;
   padding: 4rem 1rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: var(--base-color); /*Cor da bolinha da paginação*/
 }
 
 /*********** Contatos **************/
 
-#contact .grid{
+#contact .grid {
   gap: 4rem;
 }
 
 #contact .text p {
   margin-bottom: 2rem;
-
 }
 
 #contact .button i {
@@ -518,7 +500,6 @@ font-style: normal;
 #contact ul li {
   display: flex;
   align-items: center; /*Centraliza a lista*/
- 
 }
 
 #contact ul li i {
@@ -529,23 +510,22 @@ font-style: normal;
 
 /*********** Rodapé **************/
 
-footer{
+footer {
   background-color: var(--base-color);
-
 }
 
-footer.section{
-padding: 4rem 0;
+footer.section {
+  padding: 4rem 0;
 }
 
-footer .logo{
+footer .logo {
   display: inline-block; /* Usado para colocar um espaço embaixo da logo*/
-  margin-bottom: 1.5rem;/* Distancia do espaço*/
+  margin-bottom: 1.5rem; /* Distancia do espaço*/
 }
- /*Configuração do 'P'*/
-footer .brand p{
+/*Configuração do 'P'*/
+footer .brand p {
   color: var(--text-color-light);
-  margin-bottom:0.75rem ;
+  margin-bottom: 0.75rem;
 }
 
 /*Configuração dos icones de redes sociais*/
@@ -554,25 +534,24 @@ footer i {
   color: var(--text-color-light);
 }
 
-footer .social{
+footer .social {
   grid-auto-flow: column;
   width: fit-content; /* encaixe do conteudo rede social*/
 }
 
 /* Configuração do espacamentro entre icones */
-footer .social a{
-transition: 0.3s;
-display: inline-block;
-
+footer .social a {
+  transition: 0.3s;
+  display: inline-block;
 }
 
-footer .social a:hover{
+footer .social a:hover {
   transform: translateY(-8px); /*Efeito vertical dos icones de redes socias*/
 }
 
 /*********** Seta para voltar ao topo **********/
 
-.back-to-top{
+.back-to-top {
   background: var(--base-color);
   color: var(--text-color-light);
 
@@ -593,183 +572,150 @@ footer .social a:hover{
   transform: translateY(100%);
 }
 
-  .back-to-top.show{
-    visibility: visible;
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/***************************** Responsivo *******************************/
+
+/* /* extra largue devices : 1200 > */
+@media (min-width: 1200px) {
+  /* classes para reutilizar */
+
+  /* Ajuste da barra de navegação */
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  /* Centralizando titulos  */
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /* navegação */
+  nav .menu {
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
+    top: 0;
   }
 
-
-
-  /***************************** Responsivo *******************************/
-
-
-  /* /* extra largue devices : 1200 > */
-    @media (min-width: 1200px){
-
-      /* classes para reutilizar */
-
-      /* Ajuste da barra de navegação */
-      .container{
-        max-width: 1120px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .section{
-        padding: 10rem 0;
-      }
-
-        /* Centralizando titulos  */
-      .section header,
-      #testimonials header{
-        max-width: 32rem;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .button{
-        height: 3.125rem;
-      }
-
-        /* navegação */
-      nav .menu{
-        opacity: 1;
-        visibility: visible;
-        top: 0;
-      }
-
-      nav .menu ul{
-        display: flex;
-        gap: 2rem;
-      }
-
-      /* Fonte dos links de menu */
-      nav .menu ul li a.title {
-        font: 400 1rem var(--body-font);
-        -webkit-font-smoothing: antialiased;
-        
-      }
-
-      nav .menu ul li a.title.active {
-        font-weight: bold ;
-        -webkit-font-smoothing: auto;
-      }
-
-      /* Retira o icone hamburguer do menu  */
-      nav .icon-menu{
-        display: none;
-      }
-
-
-      /*********** Layout ****************/
-      main{
-        margin-top: var(--header-height);
-         
-      }
-
-      /*********** home /*************/
-
-      #home .container{
-        grid-auto-flow: column; 
-        justify-content: space-between;
-        margin: 0 auto;
-      }
-      
-
-    
-      #home .image{
-        order: 1;
-      }
-
-      #home .text{
-        order: 0;
-        max-width: 24rem;
-        text-align: left;
-      }
-          /*About*/
-        #about .container{
-          margin: 0 auto;
-          grid-auto-flow: column;
-        }
-
-        /************* Serviços **************/ 
-        /* Agrupando os cards em frações */
-        .cards {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .card {
-          padding-left: 3rem;
-          padding-right: 3rem;
-        }
-
-
-        /* Depoimentos**/
-
-        #testimonials .container{
-          margin-left: auto;
-          margin-right: auto;
-        }
-        
-        /********* Contato ************/
-        #contact .container{
-          grid-auto-flow: column;
-          align-items: center;
-
-        }
-
-        #contact .text{
-          max-width: 25rem;
-
-        }
-
-        /************** footer ************/
-        footer.section{
-          padding: 3.75rem 0;
-        
-        }
-
-        footer .container{
-          grid-auto-flow: column; /* Coloca os itens em colunas */
-          align-items: center; /* Centraliza os icones de redes socias centralizado em relação a logo do rodape*/
-          justify-content: space-between; /*insere espaço entre os dois elementos*/
-        }
-
-        footer .logo{
-          font-size: 2.25rem;
-        }
-
-     
-    }
-
-
-
-
-
-
-
-
-
-
-  /* large devices :1023 > */
-  /* large devices : 992 >  */
-
-  @media (min-width: 992px){
-    :root{
-      --title-font-size: 2.25rem;
-      --subtitle-font-size:1.125rem;
-    }
-    
-
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
   }
 
-  /* medium devices: 767 > */ 
+  /* Fonte dos links de menu */
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
 
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
 
+  /* Retira o icone hamburguer do menu  */
+  nav .icon-menu {
+    display: none;
+  }
 
+  /*********** Layout ****************/
+  main {
+    margin-top: var(--header-height);
+  }
 
+  /*********** home /*************/
 
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 
+  #home .image {
+    order: 1;
+  }
 
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+  /*About*/
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /************* Serviços **************/
+  /* Agrupando os cards em frações */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* Depoimentos**/
+
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /********* Contato ************/
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /************** footer ************/
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column; /* Coloca os itens em colunas */
+    align-items: center; /* Centraliza os icones de redes socias centralizado em relação a logo do rodape*/
+    justify-content: space-between; /*insere espaço entre os dois elementos*/
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+}
+
+/* large devices :1023 > */
+/* large devices : 992 >  */
+
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+
+/* medium devices: 767 > */
